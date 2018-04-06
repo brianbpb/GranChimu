@@ -15,6 +15,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-        echo "Bientenido al Dashboard :v";
+        return view('content.admin.homed');
     }
 }
