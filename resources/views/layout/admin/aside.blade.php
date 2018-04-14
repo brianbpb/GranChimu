@@ -11,7 +11,7 @@
             <h5 class="centered">Marcel Newman</h5>
 
             <li class="mt">
-                <a class="active" href="index.html">
+                <a href="index.html">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
@@ -27,6 +27,13 @@
                     <li><a  href="buttons.html">Buttons</a></li>
                     <li><a  href="panels.html">Panels</a></li>
                 </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a {!! Route::currentRouteName() == 'usuario.index' ? 'class="active' : ' ' !!} href="usuario/index" >
+                    <i class="fa fa-users"></i>
+                    <span>Usuarios</span>
+                </a>
             </li>
 
             <li class="sub-menu">
