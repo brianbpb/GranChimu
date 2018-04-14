@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\User;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
@@ -14,9 +15,19 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
+        //$users = DB::table('users')->get();
+        $viewdata = [];
+        $users = User::all();
+        $viewdata['users'] = $users;
 
+        return view('content.admin.users.create_user',$viewdata);
     }
 
     /**
@@ -39,6 +50,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $post = $request->all();
+
+        User::create([
+            'name' => $post['name'],
+            'lastname' => $post['lastname'],
+            'email' => $post['email'],
+            'phone' => $post['phone'],
+            'password' => bcrypt($post['password']),
+        ]);
+
+        return back();
     }
 
     /**
@@ -61,6 +83,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         //
+
     }
 
     /**
@@ -73,6 +96,7 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         //
+        dd($user);
     }
 
     /**

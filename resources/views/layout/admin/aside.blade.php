@@ -30,7 +30,7 @@
             </li>
 
             <li class="sub-menu">
-                <a {!! Route::currentRouteName() == 'usuario.index' ? 'class="active' : ' ' !!} href="usuario/index" >
+                <a {!! Route::currentRouteName() == 'usuario.index' ? 'class="active' : ' ' !!} href="usuario" >
                     <i class="fa fa-users"></i>
                     <span>Usuarios</span>
                 </a>
