@@ -48,11 +48,10 @@
 
     </section>
  <!-- js placed at the end of the document so the pages load faster -->
-
-    <script type="text/javascript" src="{{ URL::to('admin/js/users/users.js') }}"></script>
-
     <script src="{{ URL::to('admin/js/jquery.js') }}"></script>
     <script src="{{ URL::to('admin/js/jquery-1.8.3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::to('admin/js/users/users.js') }}"></script>
+    
     <script src="{{ URL::to('admin/js/bootstrap.min.js') }}"></script>
     <script class="include" type="text/javascript" src="{{ URL::to('admin/js/jquery.dcjqaccordion.2.7.js') }}"></script>
     <script src="{{ URL::to('admin/js/jquery.scrollTo.min.js') }}"></script>

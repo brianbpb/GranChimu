@@ -1,6 +1,6 @@
-@extends('layout.admin.master');
+@extends('layout.admin.master')
 
-@section('content');
+@section('content')
 
 <section id="main-content">
     <section class="wrapper">
@@ -275,4 +275,4 @@
     </section><! --/wrapper -->
 </section><!-- /MAIN CONTENT -->
 
-@endsection('content');
+@endsection('content')
