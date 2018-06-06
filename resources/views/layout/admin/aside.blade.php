@@ -37,6 +37,13 @@
             </li>
 
             <li class="sub-menu">
+                <a {!! Route::currentRouteName() == 'categoria.index' ? 'class="active' : ' ' !!} href="categoria" >
+                    <i class="fa fa-users"></i>
+                    <span>Categorias</span>
+                </a>
+            </li>
+
+            <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-cogs"></i>
                     <span>Components</span>
