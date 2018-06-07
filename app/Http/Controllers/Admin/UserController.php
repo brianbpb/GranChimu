@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use response;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
@@ -23,11 +24,9 @@ class UserController extends Controller
     public function index()
     {
         //$users = DB::table('users')->get();
-        $viewdata = [];
-        $users = User::all();
-        $viewdata['users'] = $users;
+        $user = User::all();
 
-        return view('content.admin.users.create_user',$viewdata);
+        return view('content.admin.users.create_user',compact('user'));
     }
 
     /**
@@ -35,6 +34,32 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function addUser(Request $request)
+    {
+        $user = new User();
+
+        $user->name = $request->name;
+        $user->lastname = $request->lastname;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        return response()->json($user);
+
+    }
+    public function editUser(Request $request)
+    {
+        $user = User::find($request->id);
+        $user->name = $request->name;
+        $user->lastname = $request->lastname;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->save();
+
+        return response()->json($user);
+    }
+
     public function create()
     {
         //
@@ -105,8 +130,13 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Request $request)
     {
         //
+        $id = $request->input('id');
+        $user = User::find($id);
+        $user->delete();
+
+        return $this->index();
     }
 }

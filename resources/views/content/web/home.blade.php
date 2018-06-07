@@ -6,7 +6,7 @@
 			<div class="container">
 				<!--- img-slider --->
 				<div class="img-slider">
-					
+
 					<!----//End-slider-script---->
 					<!-- Slideshow 4 -->
 					    <div  id="top" class="callbacks_container">
@@ -66,9 +66,9 @@
 				});
 			});
 		</script>
-			
+
 		<!-- /script-for-nav -->
-		
+
 		<!-- top-grids -->
 		<div class="top-grids">
 			<div class="container">
