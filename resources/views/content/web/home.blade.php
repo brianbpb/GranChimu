@@ -1,5 +1,5 @@
-@extends('layout.web.master');
-@section('content');
+@extends('layout.web.master')
+@section('content')
 
 <!-- banner -->
 		<div class="banner">
@@ -104,4 +104,4 @@
 		</div>
 		<!-- top-grids -->
 
-@endsection('content');
+@endsection('content')

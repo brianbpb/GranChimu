@@ -23,5 +23,6 @@ include 'Web/auth.php';
 //DashBoard
 
 include 'Admin/users.php';
+include 'Admin/category.php';
 
 Route::get('/dashboard', 'Admin\DashboardController@index')->name('home');

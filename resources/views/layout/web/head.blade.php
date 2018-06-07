@@ -25,8 +25,8 @@
 					<div class="bottom-header-right">
 						<ul>Siguenos en:</ul>
 						<ul>
-							<li><a href="https://www.facebook.com/"><i class="fb"> </i></a></li>
-							<li><a href="https://www.instagram.com"><i class="ig"> </i></a></li>
+							<li><a href="https://www.facebook.com/" target="blank"><i class="fb"> </i></a></li>
+							<li><a href="https://www.instagram.com" target="blank"><i class="ig"> </i></a></li>
 						</ul>
 					</div>
 				</div>
